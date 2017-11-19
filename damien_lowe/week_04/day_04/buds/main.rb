@@ -4,7 +4,7 @@ require "sqlite3"
 require "pry"
 
 get "/" do
-  erb :home
+  erb :new_bud
 end
 
 #Index - get all the buds and show them
@@ -50,6 +50,7 @@ get '/buds/:id/delete' do
   redirect to('/buds')
 end
 
+#Sets up connection to the database.db we created
 def query_db(sql_statement)
   db = SQLite3::Database.new 'database.sqlite3'
   db.results_as_hash = true

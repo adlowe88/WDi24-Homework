@@ -6,4 +6,4 @@ CREATE TABLE buds  (
 );
 
 --seed data
-INSERT INTO butterflies (name, type) VALUES ("Shiva Skunk", "Indica Hybrid");
+INSERT INTO buds (name, type) VALUES ("Shiva Skunk", "Indica Hybrid");
