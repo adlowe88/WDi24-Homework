@@ -1,0 +1,12 @@
+<h1> <%= @bud["name"] %></h1>
+<h2> <%= @bud["type"]%></h2>
+
+<!-- unless there is no image  or the image is empty -->
+<% unless @bud["image"].nil? || @bud["image"].empty %>
+  <img class="feature" src="<%= @bud["image"] %>" alt="<%= @bud["name"]%>">
+<% end %>
+
+<div class="controls">
+  <a href="/buds/<%= @bud['id']%>/delete">Delete your buddy(?!)</a>
+  <a href="/buds/<%= @bud['id']%>/edit">Edit buddy</a>
+</div>

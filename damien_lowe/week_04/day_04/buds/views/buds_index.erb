@@ -1,0 +1,10 @@
+<h1>Buds Index</h1>
+
+<ul>
+  <% @buds.each do |bud|%>
+  <li>
+    <a href="/buds/ <%= bud["id"] %>"></a>
+    <%= bud["name"] %>
+  </li>
+  <% end %>
+</ul>
