@@ -37,14 +37,14 @@ get "/buds/:id/edit" do
    erb :edit_bud
 end
 
-#UPDATE: Updates an existing butterfly in the database with new information.
+#UPDATE: Updates an existing bud in the database with new information.
 post '/buds/:id' do
   update = "UPDATE buds SET name='#{ params[:name] }', family='#{ params[:type] }', image='#{ params[:image] }' WHERE id = #{ params[:id] }"
   query_db update
   redirect to("/buds/#{ params[:id] }")
 end
 
-# Destroy: Deletes the butterfly with the provided ID from the database
+# Destroy: Deletes the bud with the provided ID from the database
 get '/buds/:id/delete' do
   query_db 'DELETE FROM buds WHERE id = ' + params[:id].to_i # Sanitisation
   redirect to('/buds')
