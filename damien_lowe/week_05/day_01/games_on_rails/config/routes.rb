@@ -8,6 +8,6 @@ Rails.application.routes.draw do
   get "/secretnumber/result" => "secretnumber#result"
 
   get "/rps" => 'rps#game3'
-  get "/rps/:throw" => 'rps#rps_play'
+  get "/rps/rps_play" => 'rps#rps_play'
 
 end
