@@ -11,4 +11,6 @@ Users click a number between 1 and 10. The controller validates the guess and re
   <button>Ask!</button>
 </form>
 
-<% unless %>
+<% unless @question.nil? %>
+  <h3> <%= @answer %> </h3>
+<% end %>
