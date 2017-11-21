@@ -23,3 +23,11 @@ nav a{
   padding-bottom: 30px;
   padding-top: 50px;
 }
+
+input {
+  font-size: 21px;
+}
+
+form {
+  display: inline-block;
+}

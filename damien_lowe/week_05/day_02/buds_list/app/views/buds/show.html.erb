@@ -3,8 +3,8 @@
 <%= image_tag(@buds.image, :class => 'feature') unless @buds.image.blank? %>
 <div>Family: <%= @buds.family %></div>
 <div>Ancestors: <%= @buds.ancestors %></div>
-<div>THC: <%= @buds.THC %></div>
-<div>CBD: <%= @buds.CBD %></div>
+<div>THC: <%= @buds.THC %>%</div>
+<div>CBD: <%= @buds.CBD %>%</div>
 
 <%= link_to "Edit Bud", bud_edit_path(@buds.id) %>
 <%= button_to "Destroy Bud (DON'T DO IT BUDDY!)", bud_path(@buds.id), :method => 'delete' %>
