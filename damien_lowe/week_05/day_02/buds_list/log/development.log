@@ -1310,3 +1310,1358 @@ No template found for BudsController#destroy, rendering head :no_content
 Completed 204 No Content in 62ms (ActiveRecord: 0.0ms)
 
 
+Started GET "/buds/1" for 127.0.0.1 at 2017-11-21 21:58:27 +1100
+Processing by BudsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBud Load (0.5ms)[0m  [1m[34mSELECT  "buds".* FROM "buds" WHERE "buds"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering buds/show.html.erb within layouts/application
+  Rendered buds/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 457ms (Views: 188.6ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/rails/info/routes" for 127.0.0.1 at 2017-11-21 21:58:32 +1100
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/damienlowe/.rvm/gems/ruby-2.4.2/gems/railties-5.1.4/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/damienlowe/.rvm/gems/ruby-2.4.2/gems/actionpack-5.1.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb [8 times] (2.7ms)
+  Rendered /Users/damienlowe/.rvm/gems/ruby-2.4.2/gems/actionpack-5.1.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (7.2ms)
+  Rendered /Users/damienlowe/.rvm/gems/ruby-2.4.2/gems/railties-5.1.4/lib/rails/templates/rails/info/routes.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 26ms (Views: 22.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/new" for 127.0.0.1 at 2017-11-21 21:58:42 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/new"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-11-21 21:58:46 +1100
+Processing by BudsController#index as HTML
+  Rendering buds/index.html.erb within layouts/application
+  [1m[36mBud Load (0.2ms)[0m  [1m[34mSELECT "buds".* FROM "buds"[0m
+  Rendered buds/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 26ms (Views: 24.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/buds/4" for 127.0.0.1 at 2017-11-21 21:58:50 +1100
+Processing by BudsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mBud Load (0.1ms)[0m  [1m[34mSELECT  "buds".* FROM "buds" WHERE "buds"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering buds/show.html.erb within layouts/application
+  Rendered buds/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 19ms (Views: 16.4ms | ActiveRecord: 0.1ms)
+
+
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mBud Load (0.6ms)[0m  [1m[34mSELECT "buds".* FROM "buds"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "buds" WHERE "buds"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "buds" WHERE "buds"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "buds" WHERE "buds"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "buds" WHERE "buds"."id" = ?[0m  [["id", 4]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "buds" WHERE "buds"."id" = ?[0m  [["id", 5]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "buds" WHERE "buds"."id" = ?[0m  [["id", 6]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "buds" ("name", "family", "ancestors", "THC", "CBD", "image") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Jedi Kush"], ["family", "Indica"], ["ancestors", "Death Star Kush"], ["THC", 22.0], ["CBD", 1.0], ["image", "app/assets/images/Jedi-Kush.jpg"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "buds" ("name", "family", "ancestors", "THC", "CBD") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Stephen Hawking Kush"], ["family", "Indica"], ["ancestors", "Harle-tsu"], ["THC", 5.0], ["CBD", 5.0]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "buds" ("name", "family", "ancestors", "THC", "CBD") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Doug's Varin"], ["family", "Sativa"], ["ancestors", "Unknown"], ["THC", 19.0], ["CBD", 0.2]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "buds" ("name", "family", "ancestors", "THC", "CBD") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Amnesia Haze"], ["family", "Sativa"], ["ancestors", "Haze, Afghani, Jamaican"], ["THC", 22.0], ["CBD", 1.0]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "buds" ("name", "family", "ancestors", "THC", "CBD") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Galactic Jack"], ["family", "Sativa"], ["ancestors", "Jack Herer, Space Queen"], ["THC", 18.0], ["CBD", 0.6]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for 127.0.0.1 at 2017-11-21 22:02:37 +1100
+Processing by BudsController#index as HTML
+  Rendering buds/index.html.erb within layouts/application
+  [1m[36mBud Load (0.3ms)[0m  [1m[34mSELECT "buds".* FROM "buds"[0m
+  Rendered buds/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 28ms (Views: 26.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/buds/7" for 127.0.0.1 at 2017-11-21 22:02:41 +1100
+Processing by BudsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mBud Load (0.1ms)[0m  [1m[34mSELECT  "buds".* FROM "buds" WHERE "buds"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering buds/show.html.erb within layouts/application
+  Rendered buds/show.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (The asset "app/assets/images/Jedi-Kush.jpg" is not present in the asset pipeline.):
+    1: <h1><%= @buds.name %></h1>
+    2: 
+    3: <%= image_tag(@buds.image, :class => 'feature') unless @buds.image.blank? %>
+    4: <div>Family: <%= @buds.family %></div>
+    5: <div>Ancestors: <%= @buds.ancestors %></div>
+    6: <div>THC: <%= @buds.THC %></div>
+  
+app/views/buds/show.html.erb:3:in `_app_views_buds_show_html_erb___2715990403029444472_70306772573760'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mBud Load (0.2ms)[0m  [1m[34mSELECT "buds".* FROM "buds"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "buds" WHERE "buds"."id" = ?[0m  [["id", 7]]
+  [1m[35m (6.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "buds" WHERE "buds"."id" = ?[0m  [["id", 8]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "buds" WHERE "buds"."id" = ?[0m  [["id", 9]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "buds" WHERE "buds"."id" = ?[0m  [["id", 10]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "buds" WHERE "buds"."id" = ?[0m  [["id", 11]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "buds" ("name", "family", "ancestors", "THC", "CBD", "image") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Jedi Kush"], ["family", "Indica"], ["ancestors", "Death Star Kush"], ["THC", 22.0], ["CBD", 1.0], ["image", "/images/Jedi-Kush.jpg"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "buds" ("name", "family", "ancestors", "THC", "CBD") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Stephen Hawking Kush"], ["family", "Indica"], ["ancestors", "Harle-tsu"], ["THC", 5.0], ["CBD", 5.0]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "buds" ("name", "family", "ancestors", "THC", "CBD") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Doug's Varin"], ["family", "Sativa"], ["ancestors", "Unknown"], ["THC", 19.0], ["CBD", 0.2]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "buds" ("name", "family", "ancestors", "THC", "CBD") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Amnesia Haze"], ["family", "Sativa"], ["ancestors", "Haze, Afghani, Jamaican"], ["THC", 22.0], ["CBD", 1.0]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "buds" ("name", "family", "ancestors", "THC", "CBD") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Galactic Jack"], ["family", "Sativa"], ["ancestors", "Jack Herer, Space Queen"], ["THC", 18.0], ["CBD", 0.6]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for 127.0.0.1 at 2017-11-21 22:03:21 +1100
+Processing by BudsController#index as HTML
+  Rendering buds/index.html.erb within layouts/application
+  [1m[36mBud Load (0.2ms)[0m  [1m[34mSELECT "buds".* FROM "buds"[0m
+  Rendered buds/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 17ms (Views: 14.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/buds/12" for 127.0.0.1 at 2017-11-21 22:03:22 +1100
+Processing by BudsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mBud Load (0.1ms)[0m  [1m[34mSELECT  "buds".* FROM "buds" WHERE "buds"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering buds/show.html.erb within layouts/application
+  Rendered buds/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 20ms (Views: 16.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/images/Jedi-Kush.jpg" for 127.0.0.1 at 2017-11-21 22:03:22 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/images/Jedi-Kush.jpg"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/images/Jedi-Kush.jpg" for 127.0.0.1 at 2017-11-21 22:03:31 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/images/Jedi-Kush.jpg"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/buds/12" for 127.0.0.1 at 2017-11-21 22:03:32 +1100
+Processing by BudsController#show as HTML
+  Parameters: {"id"=>"12"}
+Started GET "/images/Jedi-Kush.jpg" for 127.0.0.1 at 2017-11-21 22:03:32 +1100
+  [1m[36mBud Load (0.1ms)[0m  [1m[34mSELECT  "buds".* FROM "buds" WHERE "buds"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  
+ActionController::RoutingError (No route matches [GET] "/images/Jedi-Kush.jpg"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering buds/show.html.erb within layouts/application
+  Rendered buds/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 30ms (Views: 24.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/images/Jedi-Kush.jpg" for 127.0.0.1 at 2017-11-21 22:03:34 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/images/Jedi-Kush.jpg"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/buds/13" for 127.0.0.1 at 2017-11-21 22:03:35 +1100
+Processing by BudsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mBud Load (0.2ms)[0m  [1m[34mSELECT  "buds".* FROM "buds" WHERE "buds"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering buds/show.html.erb within layouts/application
+  Rendered buds/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 20ms (Views: 17.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/buds/12" for 127.0.0.1 at 2017-11-21 22:03:40 +1100
+Processing by BudsController#show as HTML
+Started GET "/images/Jedi-Kush.jpg" for 127.0.0.1 at 2017-11-21 22:03:40 +1100
+  Parameters: {"id"=>"12"}
+  
+  [1m[36mBud Load (0.1ms)[0m  [1m[34mSELECT  "buds".* FROM "buds" WHERE "buds"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+ActionController::RoutingError (No route matches [GET] "/images/Jedi-Kush.jpg"):
+  Rendering buds/show.html.erb within layouts/application
+  
+  Rendered buds/show.html.erb within layouts/application (1.2ms)
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Completed 200 OK in 25ms (Views: 21.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/buds/12" for 127.0.0.1 at 2017-11-21 22:03:57 +1100
+Processing by BudsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mBud Load (0.1ms)[0m  [1m[34mSELECT  "buds".* FROM "buds" WHERE "buds"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering buds/show.html.erb within layouts/application
+  Rendered buds/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 17ms (Views: 14.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/images/Jedi-Kush.jpg" for 127.0.0.1 at 2017-11-21 22:03:57 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/images/Jedi-Kush.jpg"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/buds/12" for 127.0.0.1 at 2017-11-21 22:03:58 +1100
+Processing by BudsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mBud Load (0.1ms)[0m  [1m[34mSELECT  "buds".* FROM "buds" WHERE "buds"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering buds/show.html.erb within layouts/application
+  Rendered buds/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 17ms (Views: 14.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/images/Jedi-Kush.jpg" for 127.0.0.1 at 2017-11-21 22:03:58 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/images/Jedi-Kush.jpg"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mBud Load (0.1ms)[0m  [1m[34mSELECT "buds".* FROM "buds"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "buds" WHERE "buds"."id" = ?[0m  [["id", 12]]
+  [1m[35m (5.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "buds" WHERE "buds"."id" = ?[0m  [["id", 13]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "buds" WHERE "buds"."id" = ?[0m  [["id", 14]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "buds" WHERE "buds"."id" = ?[0m  [["id", 15]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "buds" WHERE "buds"."id" = ?[0m  [["id", 16]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "buds" ("name", "family", "ancestors", "THC", "CBD", "image") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Jedi Kush"], ["family", "Indica"], ["ancestors", "Death Star Kush"], ["THC", 22.0], ["CBD", 1.0], ["image", "/assets/images/Jedi-Kush.jpg"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "buds" ("name", "family", "ancestors", "THC", "CBD") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Stephen Hawking Kush"], ["family", "Indica"], ["ancestors", "Harle-tsu"], ["THC", 5.0], ["CBD", 5.0]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "buds" ("name", "family", "ancestors", "THC", "CBD") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Doug's Varin"], ["family", "Sativa"], ["ancestors", "Unknown"], ["THC", 19.0], ["CBD", 0.2]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "buds" ("name", "family", "ancestors", "THC", "CBD") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Amnesia Haze"], ["family", "Sativa"], ["ancestors", "Haze, Afghani, Jamaican"], ["THC", 22.0], ["CBD", 1.0]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "buds" ("name", "family", "ancestors", "THC", "CBD") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Galactic Jack"], ["family", "Sativa"], ["ancestors", "Jack Herer, Space Queen"], ["THC", 18.0], ["CBD", 0.6]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/buds/12" for 127.0.0.1 at 2017-11-21 22:04:10 +1100
+Processing by BudsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mBud Load (0.3ms)[0m  [1m[34mSELECT  "buds".* FROM "buds" WHERE "buds"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Bud with 'id'=12):
+  
+app/controllers/buds_controller.rb:26:in `show'
+Started GET "/buds" for 127.0.0.1 at 2017-11-21 22:04:17 +1100
+Processing by BudsController#index as HTML
+  Rendering buds/index.html.erb within layouts/application
+  [1m[36mBud Load (0.3ms)[0m  [1m[34mSELECT "buds".* FROM "buds"[0m
+  Rendered buds/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 21ms (Views: 18.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/buds/17" for 127.0.0.1 at 2017-11-21 22:04:18 +1100
+Processing by BudsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mBud Load (0.2ms)[0m  [1m[34mSELECT  "buds".* FROM "buds" WHERE "buds"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  Rendering buds/show.html.erb within layouts/application
+  Rendered buds/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 22ms (Views: 18.8ms | ActiveRecord: 0.2ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/images/Jedi-Kush.jpg"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.1.4) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.1.4) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
+activesupport (5.1.4) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.1.4) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mBud Load (0.1ms)[0m  [1m[34mSELECT "buds".* FROM "buds"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "buds" WHERE "buds"."id" = ?[0m  [["id", 17]]
+  [1m[35m (6.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "buds" WHERE "buds"."id" = ?[0m  [["id", 18]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "buds" WHERE "buds"."id" = ?[0m  [["id", 19]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "buds" WHERE "buds"."id" = ?[0m  [["id", 20]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "buds" WHERE "buds"."id" = ?[0m  [["id", 21]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "buds" ("name", "family", "ancestors", "THC", "CBD", "image") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Jedi Kush"], ["family", "Indica"], ["ancestors", "Death Star Kush"], ["THC", 22.0], ["CBD", 1.0], ["image", "/assets/images/Jedi-Kush.jpg"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "buds" ("name", "family", "ancestors", "THC", "CBD") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Stephen Hawking Kush"], ["family", "Indica"], ["ancestors", "Harle-tsu"], ["THC", 5.0], ["CBD", 5.0]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "buds" ("name", "family", "ancestors", "THC", "CBD") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Doug's Varin"], ["family", "Sativa"], ["ancestors", "Unknown"], ["THC", 19.0], ["CBD", 0.2]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "buds" ("name", "family", "ancestors", "THC", "CBD") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Amnesia Haze"], ["family", "Sativa"], ["ancestors", "Haze, Afghani, Jamaican"], ["THC", 22.0], ["CBD", 1.0]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "buds" ("name", "family", "ancestors", "THC", "CBD", "image") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Galactic Jack"], ["family", "Sativa"], ["ancestors", "Jack Herer, Space Queen"], ["THC", 18.0], ["CBD", 0.6], ["image", "https://herb.co/wp-content/uploads/2016/12/Galactic-Jack.jpg"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/buds/17" for 127.0.0.1 at 2017-11-21 22:06:09 +1100
+Processing by BudsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mBud Load (0.1ms)[0m  [1m[34mSELECT  "buds".* FROM "buds" WHERE "buds"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Bud with 'id'=17):
+  
+app/controllers/buds_controller.rb:26:in `show'
+Started GET "/" for 127.0.0.1 at 2017-11-21 22:06:17 +1100
+Processing by BudsController#index as HTML
+  Rendering buds/index.html.erb within layouts/application
+  [1m[36mBud Load (0.2ms)[0m  [1m[34mSELECT "buds".* FROM "buds"[0m
+  Rendered buds/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 16ms (Views: 14.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/buds/26" for 127.0.0.1 at 2017-11-21 22:06:18 +1100
+Processing by BudsController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mBud Load (0.2ms)[0m  [1m[34mSELECT  "buds".* FROM "buds" WHERE "buds"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  Rendering buds/show.html.erb within layouts/application
+  Rendered buds/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 20ms (Views: 16.5ms | ActiveRecord: 0.2ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mBud Load (0.2ms)[0m  [1m[34mSELECT "buds".* FROM "buds"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "buds" WHERE "buds"."id" = ?[0m  [["id", 22]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "buds" WHERE "buds"."id" = ?[0m  [["id", 23]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "buds" WHERE "buds"."id" = ?[0m  [["id", 24]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "buds" WHERE "buds"."id" = ?[0m  [["id", 25]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "buds" WHERE "buds"."id" = ?[0m  [["id", 26]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "buds" ("name", "family", "ancestors", "THC", "CBD", "image") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Jedi Kush"], ["family", "Indica"], ["ancestors", "Death Star Kush"], ["THC", 22.0], ["CBD", 1.0], ["image", "https://herb.co/wp-content/uploads/2017/05/Jedi-Kush.jpg "]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "buds" ("name", "family", "ancestors", "THC", "CBD", "image") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Stephen Hawking Kush"], ["family", "Indica"], ["ancestors", "Harle-tsu"], ["THC", 5.0], ["CBD", 5.0], ["image", "https://herb.co/wp-content/uploads/2017/04/Stephen-Hawking-Kush.jpg"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "buds" ("name", "family", "ancestors", "THC", "CBD", "image") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Doug's Varin"], ["family", "Sativa"], ["ancestors", "Unknown"], ["THC", 19.0], ["CBD", 0.2], ["image", "https://herb.co/wp-content/uploads/2017/04/Dougs-Varin.jpg"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "buds" ("name", "family", "ancestors", "THC", "CBD", "image") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Amnesia Haze"], ["family", "Sativa"], ["ancestors", "Haze, Afghani, Jamaican"], ["THC", 22.0], ["CBD", 1.0], ["image", "https://herb.co/wp-content/uploads/2016/10/Amnesia-Haze-hero.jpg"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "buds" ("name", "family", "ancestors", "THC", "CBD", "image") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Galactic Jack"], ["family", "Sativa"], ["ancestors", "Jack Herer, Space Queen"], ["THC", 18.0], ["CBD", 0.6], ["image", "https://herb.co/wp-content/uploads/2016/12/Galactic-Jack.jpg"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/buds/22" for 127.0.0.1 at 2017-11-21 22:10:26 +1100
+Processing by BudsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mBud Load (0.2ms)[0m  [1m[34mSELECT  "buds".* FROM "buds" WHERE "buds"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Bud with 'id'=22):
+  
+app/controllers/buds_controller.rb:26:in `show'
+Started GET "/" for 127.0.0.1 at 2017-11-21 22:10:28 +1100
+Processing by BudsController#index as HTML
+  Rendering buds/index.html.erb within layouts/application
+  [1m[36mBud Load (0.2ms)[0m  [1m[34mSELECT "buds".* FROM "buds"[0m
+  Rendered buds/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 26ms (Views: 23.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/buds/27" for 127.0.0.1 at 2017-11-21 22:10:30 +1100
+Processing by BudsController#show as HTML
+  Parameters: {"id"=>"27"}
+  [1m[36mBud Load (0.2ms)[0m  [1m[34mSELECT  "buds".* FROM "buds" WHERE "buds"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+  Rendering buds/show.html.erb within layouts/application
+  Rendered buds/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 20ms (Views: 17.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/buds/28" for 127.0.0.1 at 2017-11-21 22:10:33 +1100
+Processing by BudsController#show as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mBud Load (0.1ms)[0m  [1m[34mSELECT  "buds".* FROM "buds" WHERE "buds"."id" = ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+  Rendering buds/show.html.erb within layouts/application
+  Rendered buds/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 22ms (Views: 18.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/buds/29" for 127.0.0.1 at 2017-11-21 22:10:36 +1100
+Processing by BudsController#show as HTML
+  Parameters: {"id"=>"29"}
+  [1m[36mBud Load (0.1ms)[0m  [1m[34mSELECT  "buds".* FROM "buds" WHERE "buds"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  Rendering buds/show.html.erb within layouts/application
+  Rendered buds/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 20ms (Views: 16.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/buds/30" for 127.0.0.1 at 2017-11-21 22:10:38 +1100
+Processing by BudsController#show as HTML
+  Parameters: {"id"=>"30"}
+  [1m[36mBud Load (0.1ms)[0m  [1m[34mSELECT  "buds".* FROM "buds" WHERE "buds"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+  Rendering buds/show.html.erb within layouts/application
+  Rendered buds/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 21ms (Views: 17.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/buds/31" for 127.0.0.1 at 2017-11-21 22:10:42 +1100
+Processing by BudsController#show as HTML
+  Parameters: {"id"=>"31"}
+  [1m[36mBud Load (0.1ms)[0m  [1m[34mSELECT  "buds".* FROM "buds" WHERE "buds"."id" = ? LIMIT ?[0m  [["id", 31], ["LIMIT", 1]]
+  Rendering buds/show.html.erb within layouts/application
+  Rendered buds/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 26ms (Views: 22.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-21 22:22:17 +1100
+Processing by BudsController#index as HTML
+  Rendering buds/index.html.erb within layouts/application
+  [1m[36mBud Load (0.1ms)[0m  [1m[34mSELECT "buds".* FROM "buds"[0m
+  Rendered buds/index.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 30ms (Views: 26.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/buds/28" for 127.0.0.1 at 2017-11-21 22:22:19 +1100
+Processing by BudsController#show as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mBud Load (0.3ms)[0m  [1m[34mSELECT  "buds".* FROM "buds" WHERE "buds"."id" = ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+  Rendering buds/show.html.erb within layouts/application
+  Rendered buds/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 19ms (Views: 15.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/buds/28/edit" for 127.0.0.1 at 2017-11-21 22:22:22 +1100
+Processing by BudsController#edit as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mBud Load (0.1ms)[0m  [1m[34mSELECT  "buds".* FROM "buds" WHERE "buds"."id" = ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+  Rendering buds/edit.html.erb within layouts/application
+  Rendered buds/edit.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 19ms (Views: 16.4ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/buds/28" for 127.0.0.1 at 2017-11-21 22:22:27 +1100
+Processing by BudsController#update as HTML
+  Parameters: {"name"=>"Stephen Hawking Kush 2", "image"=>"https://herb.co/wp-content/uploads/2017/04/Stephen-Hawking-Kush.jpg", "family"=>"Indica", "ancestors"=>"Harle-tsu", "THC"=>"5.0", "CBD"=>"5.0", "id"=>"28"}
+  [1m[36mBud Load (0.1ms)[0m  [1m[34mSELECT  "buds".* FROM "buds" WHERE "buds"."id" = ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "buds" SET "name" = ? WHERE "buds"."id" = ?[0m  [["name", "Stephen Hawking Kush 2"], ["id", 28]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/buds/28
+Completed 302 Found in 5ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/buds/28" for 127.0.0.1 at 2017-11-21 22:22:27 +1100
+Processing by BudsController#show as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mBud Load (0.1ms)[0m  [1m[34mSELECT  "buds".* FROM "buds" WHERE "buds"."id" = ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+  Rendering buds/show.html.erb within layouts/application
+  Rendered buds/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 17ms (Views: 14.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/buds/28" for 127.0.0.1 at 2017-11-21 22:23:12 +1100
+Processing by BudsController#show as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mBud Load (0.2ms)[0m  [1m[34mSELECT  "buds".* FROM "buds" WHERE "buds"."id" = ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+  Rendering buds/show.html.erb within layouts/application
+  Rendered buds/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 28ms (Views: 24.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/buds/28/edit" for 127.0.0.1 at 2017-11-21 22:23:15 +1100
+Processing by BudsController#edit as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mBud Load (0.1ms)[0m  [1m[34mSELECT  "buds".* FROM "buds" WHERE "buds"."id" = ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+  Rendering buds/edit.html.erb within layouts/application
+  Rendered buds/edit.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 16ms (Views: 13.0ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/buds/28" for 127.0.0.1 at 2017-11-21 22:23:18 +1100
+Processing by BudsController#update as HTML
+  Parameters: {"name"=>"Stephen Hawking Kush", "image"=>"https://herb.co/wp-content/uploads/2017/04/Stephen-Hawking-Kush.jpg", "family"=>"Indica", "ancestors"=>"Harle-tsu", "THC"=>"5.0", "CBD"=>"5.0", "id"=>"28"}
+  [1m[36mBud Load (0.1ms)[0m  [1m[34mSELECT  "buds".* FROM "buds" WHERE "buds"."id" = ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "buds" SET "name" = ? WHERE "buds"."id" = ?[0m  [["name", "Stephen Hawking Kush"], ["id", 28]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/buds/28
+Completed 302 Found in 4ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/buds/28" for 127.0.0.1 at 2017-11-21 22:23:18 +1100
+Processing by BudsController#show as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mBud Load (0.1ms)[0m  [1m[34mSELECT  "buds".* FROM "buds" WHERE "buds"."id" = ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+  Rendering buds/show.html.erb within layouts/application
+  Rendered buds/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 15ms (Views: 12.5ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/buds/28" for 127.0.0.1 at 2017-11-21 22:23:20 +1100
+Processing by BudsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"sC4tn/wZ0aP8ycq6IFvVpDJcgD6WGeCr7D/xTLnPhhR89jNlmRia4ArvmxbZ0MidNFo36ymhpQrT434eN/4qNw==", "id"=>"28"}
+  [1m[36mBud Load (0.1ms)[0m  [1m[34mSELECT  "buds".* FROM "buds" WHERE "buds"."id" = ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "buds" WHERE "buds"."id" = ?[0m  [["id", 28]]
+  [1m[35m (6.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/buds
+Completed 302 Found in 9ms (ActiveRecord: 6.6ms)
+
+
+Started GET "/buds" for 127.0.0.1 at 2017-11-21 22:23:20 +1100
+Processing by BudsController#index as HTML
+  Rendering buds/index.html.erb within layouts/application
+  [1m[36mBud Load (0.2ms)[0m  [1m[34mSELECT "buds".* FROM "buds"[0m
+  Rendered buds/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 17ms (Views: 14.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/buds/31" for 127.0.0.1 at 2017-11-21 22:23:22 +1100
+Processing by BudsController#show as HTML
+  Parameters: {"id"=>"31"}
+  [1m[36mBud Load (0.2ms)[0m  [1m[34mSELECT  "buds".* FROM "buds" WHERE "buds"."id" = ? LIMIT ?[0m  [["id", 31], ["LIMIT", 1]]
+  Rendering buds/show.html.erb within layouts/application
+  Rendered buds/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 21ms (Views: 17.7ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/buds/31" for 127.0.0.1 at 2017-11-21 22:23:24 +1100
+Processing by BudsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"r8ZTqahLEn6NiuiEwxsFUdsSYUC8ZO1xrAuMB8zrH+L6QqLOuG5wXwUVcF5HonORmVR3hBVnkjunJaewho45WA==", "id"=>"31"}
+  [1m[36mBud Load (0.2ms)[0m  [1m[34mSELECT  "buds".* FROM "buds" WHERE "buds"."id" = ? LIMIT ?[0m  [["id", 31], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "buds" WHERE "buds"."id" = ?[0m  [["id", 31]]
+  [1m[35m (6.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/buds
+Completed 302 Found in 10ms (ActiveRecord: 7.4ms)
+
+
+Started GET "/buds" for 127.0.0.1 at 2017-11-21 22:23:24 +1100
+Processing by BudsController#index as HTML
+  Rendering buds/index.html.erb within layouts/application
+  [1m[36mBud Load (0.2ms)[0m  [1m[34mSELECT "buds".* FROM "buds"[0m
+  Rendered buds/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 16ms (Views: 14.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/buds" for 127.0.0.1 at 2017-11-21 22:23:25 +1100
+Processing by BudsController#index as HTML
+  Rendering buds/index.html.erb within layouts/application
+  [1m[36mBud Load (0.2ms)[0m  [1m[34mSELECT "buds".* FROM "buds"[0m
+  Rendered buds/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 18ms (Views: 15.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/buds/new" for 127.0.0.1 at 2017-11-21 22:23:28 +1100
+Processing by BudsController#new as HTML
+  Rendering buds/new.html.erb within layouts/application
+  Rendered buds/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 21ms (Views: 14.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/buds" for 127.0.0.1 at 2017-11-21 22:23:36 +1100
+Processing by BudsController#create as HTML
+  Parameters: {"name"=>"awe", "family"=>"aew", "ancestors"=>"aew", "THC"=>"2", "CBD"=>"1", "image"=>""}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "buds" ("name", "family", "ancestors", "THC", "CBD") VALUES (?, ?, ?, ?, ?)[0m  [["name", "awe"], ["family", "aew"], ["ancestors", "aew"], ["THC", 2.0], ["CBD", 1.0]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/buds
+Completed 302 Found in 4ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/buds" for 127.0.0.1 at 2017-11-21 22:23:36 +1100
+Processing by BudsController#index as HTML
+  Rendering buds/index.html.erb within layouts/application
+  [1m[36mBud Load (0.2ms)[0m  [1m[34mSELECT "buds".* FROM "buds"[0m
+  Rendered buds/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 17ms (Views: 14.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/buds/32" for 127.0.0.1 at 2017-11-21 22:23:39 +1100
+Processing by BudsController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[36mBud Load (0.1ms)[0m  [1m[34mSELECT  "buds".* FROM "buds" WHERE "buds"."id" = ? LIMIT ?[0m  [["id", 32], ["LIMIT", 1]]
+  Rendering buds/show.html.erb within layouts/application
+  Rendered buds/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 18ms (Views: 14.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/buds/32" for 127.0.0.1 at 2017-11-21 22:23:40 +1100
+Processing by BudsController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[36mBud Load (0.1ms)[0m  [1m[34mSELECT  "buds".* FROM "buds" WHERE "buds"."id" = ? LIMIT ?[0m  [["id", 32], ["LIMIT", 1]]
+  Rendering buds/show.html.erb within layouts/application
+  Rendered buds/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 17ms (Views: 14.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/buds/32" for 127.0.0.1 at 2017-11-21 22:23:42 +1100
+Processing by BudsController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[36mBud Load (0.1ms)[0m  [1m[34mSELECT  "buds".* FROM "buds" WHERE "buds"."id" = ? LIMIT ?[0m  [["id", 32], ["LIMIT", 1]]
+  Rendering buds/show.html.erb within layouts/application
+  Rendered buds/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 19ms (Views: 16.1ms | ActiveRecord: 0.1ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mBud Load (0.2ms)[0m  [1m[34mSELECT "buds".* FROM "buds"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "buds" WHERE "buds"."id" = ?[0m  [["id", 27]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "buds" WHERE "buds"."id" = ?[0m  [["id", 29]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "buds" WHERE "buds"."id" = ?[0m  [["id", 30]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "buds" WHERE "buds"."id" = ?[0m  [["id", 32]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "buds" ("name", "family", "ancestors", "THC", "CBD", "image") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Jedi Kush"], ["family", "Indica"], ["ancestors", "Death Star Kush"], ["THC", 22.0], ["CBD", 1.0], ["image", "https://herb.co/wp-content/uploads/2017/05/Jedi-Kush.jpg "]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "buds" ("name", "family", "ancestors", "THC", "CBD", "image") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Stephen Hawking Kush"], ["family", "Indica"], ["ancestors", "Harle-tsu"], ["THC", 5.0], ["CBD", 5.0], ["image", "https://herb.co/wp-content/uploads/2017/04/Stephen-Hawking-Kush.jpg"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "buds" ("name", "family", "ancestors", "THC", "CBD", "image") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Doug's Varin"], ["family", "Sativa"], ["ancestors", "Unknown"], ["THC", 19.0], ["CBD", 0.2], ["image", "https://herb.co/wp-content/uploads/2017/04/Dougs-Varin.jpg"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "buds" ("name", "family", "ancestors", "THC", "CBD", "image") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Amnesia Haze"], ["family", "Sativa"], ["ancestors", "Haze, Afghani, Jamaican"], ["THC", 22.0], ["CBD", 1.0], ["image", "https://herb.co/wp-content/uploads/2016/10/Amnesia-Haze-hero.jpg"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "buds" ("name", "family", "ancestors", "THC", "CBD", "image") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Galactic Jack"], ["family", "Sativa"], ["ancestors", "Jack Herer, Space Queen"], ["THC", 18.0], ["CBD", 0.6], ["image", "https://herb.co/wp-content/uploads/2016/12/Galactic-Jack.jpg"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/buds/32" for 127.0.0.1 at 2017-11-21 22:25:02 +1100
+Processing by BudsController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[36mBud Load (0.1ms)[0m  [1m[34mSELECT  "buds".* FROM "buds" WHERE "buds"."id" = ? LIMIT ?[0m  [["id", 32], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Bud with 'id'=32):
+  
+app/controllers/buds_controller.rb:26:in `show'
+Started GET "/" for 127.0.0.1 at 2017-11-21 22:25:07 +1100
+Processing by BudsController#index as HTML
+  Rendering buds/index.html.erb within layouts/application
+  [1m[36mBud Load (0.2ms)[0m  [1m[34mSELECT "buds".* FROM "buds"[0m
+  Rendered buds/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 15ms (Views: 12.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-21 22:32:03 +1100
+Processing by BudsController#index as HTML
+  Rendering buds/index.html.erb within layouts/application
+  [1m[36mBud Load (0.2ms)[0m  [1m[34mSELECT "buds".* FROM "buds"[0m
+  Rendered buds/index.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"buds"}, missing required keys: [:id]):
+    12:     <nav>
+    13:        <%= link_to 'All Delicious Buds', root_path %>
+    14:        <%= link_to 'Add a friend!', buds_new_path %>
+    15:        <%= link_to 'Edit a bud', bud_edit_path %>
+    16:     </nav>
+    17:     <%= yield %>
+    18:   </body>
+  
+app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb__3003579675262139869_70306755010680'
+Started GET "/" for 127.0.0.1 at 2017-11-21 22:32:25 +1100
+Processing by BudsController#index as HTML
+  Rendering buds/index.html.erb within layouts/application
+  [1m[36mBud Load (0.2ms)[0m  [1m[34mSELECT "buds".* FROM "buds"[0m
+  Rendered buds/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 16ms (Views: 14.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-21 22:33:32 +1100
+Processing by BudsController#index as HTML
+  Rendering buds/index.html.erb within layouts/application
+  [1m[36mBud Load (0.2ms)[0m  [1m[34mSELECT "buds".* FROM "buds"[0m
+  Rendered buds/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 59ms (Views: 55.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-21 22:33:36 +1100
+Processing by BudsController#index as HTML
+  Rendering buds/index.html.erb within layouts/application
+  [1m[36mBud Load (0.2ms)[0m  [1m[34mSELECT "buds".* FROM "buds"[0m
+  Rendered buds/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 18ms (Views: 16.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-21 22:33:38 +1100
+Processing by BudsController#index as HTML
+  Rendering buds/index.html.erb within layouts/application
+  [1m[36mBud Load (0.2ms)[0m  [1m[34mSELECT "buds".* FROM "buds"[0m
+  Rendered buds/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 19ms (Views: 16.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-21 22:33:47 +1100
+Processing by BudsController#index as HTML
+  Rendering buds/index.html.erb within layouts/application
+  [1m[36mBud Load (0.3ms)[0m  [1m[34mSELECT "buds".* FROM "buds"[0m
+  Rendered buds/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 25ms (Views: 22.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-21 22:34:19 +1100
+Processing by BudsController#index as HTML
+  Rendering buds/index.html.erb within layouts/application
+  [1m[36mBud Load (0.2ms)[0m  [1m[34mSELECT "buds".* FROM "buds"[0m
+  Rendered buds/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 27ms (Views: 25.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-21 22:34:32 +1100
+Processing by BudsController#index as HTML
+  Rendering buds/index.html.erb within layouts/application
+  [1m[36mBud Load (0.2ms)[0m  [1m[34mSELECT "buds".* FROM "buds"[0m
+  Rendered buds/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 28ms (Views: 25.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-21 22:35:31 +1100
+Processing by BudsController#index as HTML
+  Rendering buds/index.html.erb within layouts/application
+  [1m[36mBud Load (0.3ms)[0m  [1m[34mSELECT "buds".* FROM "buds"[0m
+  Rendered buds/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 28ms (Views: 26.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-21 22:35:43 +1100
+Processing by BudsController#index as HTML
+  Rendering buds/index.html.erb within layouts/application
+  [1m[36mBud Load (0.2ms)[0m  [1m[34mSELECT "buds".* FROM "buds"[0m
+  Rendered buds/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 32ms (Views: 30.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-21 22:36:35 +1100
+Processing by BudsController#index as HTML
+  Rendering buds/index.html.erb within layouts/application
+  [1m[36mBud Load (0.2ms)[0m  [1m[34mSELECT "buds".* FROM "buds"[0m
+  Rendered buds/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 27ms (Views: 25.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-21 22:36:41 +1100
+Processing by BudsController#index as HTML
+  Rendering buds/index.html.erb within layouts/application
+  [1m[36mBud Load (0.3ms)[0m  [1m[34mSELECT "buds".* FROM "buds"[0m
+  Rendered buds/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 19ms (Views: 16.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-21 22:36:48 +1100
+Processing by BudsController#index as HTML
+  Rendering buds/index.html.erb within layouts/application
+  [1m[36mBud Load (0.2ms)[0m  [1m[34mSELECT "buds".* FROM "buds"[0m
+  Rendered buds/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 35ms (Views: 33.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-21 22:37:02 +1100
+Processing by BudsController#index as HTML
+  Rendering buds/index.html.erb within layouts/application
+  [1m[36mBud Load (0.2ms)[0m  [1m[34mSELECT "buds".* FROM "buds"[0m
+  Rendered buds/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 24ms (Views: 21.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-21 22:37:16 +1100
+Processing by BudsController#index as HTML
+  Rendering buds/index.html.erb within layouts/application
+  [1m[36mBud Load (0.2ms)[0m  [1m[34mSELECT "buds".* FROM "buds"[0m
+  Rendered buds/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 26ms (Views: 24.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-21 22:37:23 +1100
+Processing by BudsController#index as HTML
+  Rendering buds/index.html.erb within layouts/application
+  [1m[36mBud Load (0.2ms)[0m  [1m[34mSELECT "buds".* FROM "buds"[0m
+  Rendered buds/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 28ms (Views: 25.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-21 22:37:49 +1100
+Processing by BudsController#index as HTML
+  Rendering buds/index.html.erb within layouts/application
+  [1m[36mBud Load (0.3ms)[0m  [1m[34mSELECT "buds".* FROM "buds"[0m
+  Rendered buds/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 18ms (Views: 16.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-21 22:38:14 +1100
+Processing by BudsController#index as HTML
+  Rendering buds/index.html.erb within layouts/application
+  [1m[36mBud Load (0.2ms)[0m  [1m[34mSELECT "buds".* FROM "buds"[0m
+  Rendered buds/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 21ms (Views: 18.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-21 22:38:52 +1100
+Processing by BudsController#index as HTML
+  Rendering buds/index.html.erb within layouts/application
+  [1m[36mBud Load (0.2ms)[0m  [1m[34mSELECT "buds".* FROM "buds"[0m
+  Rendered buds/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 31ms (Views: 29.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-21 22:39:39 +1100
+Processing by BudsController#index as HTML
+  Rendering buds/index.html.erb within layouts/application
+  [1m[36mBud Load (0.2ms)[0m  [1m[34mSELECT "buds".* FROM "buds"[0m
+  Rendered buds/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 33ms (Views: 30.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-21 22:39:53 +1100
+Processing by BudsController#index as HTML
+  Rendering buds/index.html.erb within layouts/application
+  [1m[36mBud Load (0.2ms)[0m  [1m[34mSELECT "buds".* FROM "buds"[0m
+  Rendered buds/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 35ms (Views: 33.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-21 22:39:59 +1100
+Processing by BudsController#index as HTML
+  Rendering buds/index.html.erb within layouts/application
+  [1m[36mBud Load (0.3ms)[0m  [1m[34mSELECT "buds".* FROM "buds"[0m
+  Rendered buds/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 36ms (Views: 33.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-21 22:40:12 +1100
+Processing by BudsController#index as HTML
+  Rendering buds/index.html.erb within layouts/application
+  [1m[36mBud Load (0.2ms)[0m  [1m[34mSELECT "buds".* FROM "buds"[0m
+  Rendered buds/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 32ms (Views: 29.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-21 22:40:17 +1100
+Processing by BudsController#index as HTML
+  Rendering buds/index.html.erb within layouts/application
+  [1m[36mBud Load (0.3ms)[0m  [1m[34mSELECT "buds".* FROM "buds"[0m
+  Rendered buds/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 38ms (Views: 35.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-21 22:40:27 +1100
+Processing by BudsController#index as HTML
+  Rendering buds/index.html.erb within layouts/application
+  [1m[36mBud Load (0.2ms)[0m  [1m[34mSELECT "buds".* FROM "buds"[0m
+  Rendered buds/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 41ms (Views: 38.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-21 22:40:37 +1100
+Processing by BudsController#index as HTML
+  Rendering buds/index.html.erb within layouts/application
+  [1m[36mBud Load (0.2ms)[0m  [1m[34mSELECT "buds".* FROM "buds"[0m
+  Rendered buds/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 30ms (Views: 27.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-21 22:40:49 +1100
+Processing by BudsController#index as HTML
+  Rendering buds/index.html.erb within layouts/application
+  [1m[36mBud Load (0.2ms)[0m  [1m[34mSELECT "buds".* FROM "buds"[0m
+  Rendered buds/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 20ms (Views: 17.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/buds/33" for 127.0.0.1 at 2017-11-21 22:40:51 +1100
+Processing by BudsController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[36mBud Load (0.1ms)[0m  [1m[34mSELECT  "buds".* FROM "buds" WHERE "buds"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  Rendering buds/show.html.erb within layouts/application
+  Rendered buds/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 21ms (Views: 17.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-21 22:41:16 +1100
+Processing by BudsController#index as HTML
+  Rendering buds/index.html.erb within layouts/application
+  [1m[36mBud Load (0.2ms)[0m  [1m[34mSELECT "buds".* FROM "buds"[0m
+  Rendered buds/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 23ms (Views: 19.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-21 22:41:37 +1100
+Processing by BudsController#index as HTML
+  Rendering buds/index.html.erb within layouts/application
+  [1m[36mBud Load (0.2ms)[0m  [1m[34mSELECT "buds".* FROM "buds"[0m
+  Rendered buds/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 39ms (Views: 35.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/buds/33" for 127.0.0.1 at 2017-11-21 22:41:43 +1100
+Processing by BudsController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[36mBud Load (0.1ms)[0m  [1m[34mSELECT  "buds".* FROM "buds" WHERE "buds"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  Rendering buds/show.html.erb within layouts/application
+  Rendered buds/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 20ms (Views: 17.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-21 22:42:09 +1100
+Processing by BudsController#index as HTML
+  Rendering buds/index.html.erb within layouts/application
+  [1m[36mBud Load (0.2ms)[0m  [1m[34mSELECT "buds".* FROM "buds"[0m
+  Rendered buds/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 26ms (Views: 23.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/buds/33" for 127.0.0.1 at 2017-11-21 22:42:35 +1100
+Processing by BudsController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[36mBud Load (0.2ms)[0m  [1m[34mSELECT  "buds".* FROM "buds" WHERE "buds"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  Rendering buds/show.html.erb within layouts/application
+  Rendered buds/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 25ms (Views: 21.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/buds/34" for 127.0.0.1 at 2017-11-21 22:42:40 +1100
+Processing by BudsController#show as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mBud Load (0.1ms)[0m  [1m[34mSELECT  "buds".* FROM "buds" WHERE "buds"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering buds/show.html.erb within layouts/application
+  Rendered buds/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 20ms (Views: 17.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/buds/35" for 127.0.0.1 at 2017-11-21 22:42:43 +1100
+Processing by BudsController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mBud Load (0.1ms)[0m  [1m[34mSELECT  "buds".* FROM "buds" WHERE "buds"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  Rendering buds/show.html.erb within layouts/application
+  Rendered buds/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 21ms (Views: 18.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/buds/36" for 127.0.0.1 at 2017-11-21 22:42:47 +1100
+Processing by BudsController#show as HTML
+  Parameters: {"id"=>"36"}
+  [1m[36mBud Load (0.2ms)[0m  [1m[34mSELECT  "buds".* FROM "buds" WHERE "buds"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  Rendering buds/show.html.erb within layouts/application
+  Rendered buds/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 23ms (Views: 20.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/buds/37" for 127.0.0.1 at 2017-11-21 22:42:50 +1100
+Processing by BudsController#show as HTML
+  Parameters: {"id"=>"37"}
+  [1m[36mBud Load (0.2ms)[0m  [1m[34mSELECT  "buds".* FROM "buds" WHERE "buds"."id" = ? LIMIT ?[0m  [["id", 37], ["LIMIT", 1]]
+  Rendering buds/show.html.erb within layouts/application
+  Rendered buds/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 22ms (Views: 18.3ms | ActiveRecord: 0.2ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mBud Load (0.2ms)[0m  [1m[34mSELECT "buds".* FROM "buds"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "buds" WHERE "buds"."id" = ?[0m  [["id", 33]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "buds" WHERE "buds"."id" = ?[0m  [["id", 34]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "buds" WHERE "buds"."id" = ?[0m  [["id", 35]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "buds" WHERE "buds"."id" = ?[0m  [["id", 36]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "buds" WHERE "buds"."id" = ?[0m  [["id", 37]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "buds" ("name", "family", "ancestors", "THC", "CBD", "image") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Northern Lights"], ["family", "Indica"], ["ancestors", "Afghani, Thai"], ["THC", 26.0], ["CBD", 1.2], ["image", "https://herb.co/wp-content/uploads/2016/10/Northern-Lights-hero.jpg"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "buds" ("name", "family", "ancestors", "THC", "CBD", "image") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Jedi Kush"], ["family", "Indica"], ["ancestors", "Death Star Kush"], ["THC", 22.0], ["CBD", 1.0], ["image", "https://herb.co/wp-content/uploads/2017/05/Jedi-Kush.jpg "]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "buds" ("name", "family", "ancestors", "THC", "CBD", "image") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Stephen Hawking Kush"], ["family", "Indica"], ["ancestors", "Harle-tsu"], ["THC", 5.0], ["CBD", 5.0], ["image", "https://herb.co/wp-content/uploads/2017/04/Stephen-Hawking-Kush.jpg"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "buds" ("name", "family", "ancestors", "THC", "CBD", "image") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Doug's Varin"], ["family", "Sativa"], ["ancestors", "Unknown"], ["THC", 19.0], ["CBD", 0.2], ["image", "https://herb.co/wp-content/uploads/2017/04/Dougs-Varin.jpg"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "buds" ("name", "family", "ancestors", "THC", "CBD", "image") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Amnesia Haze"], ["family", "Sativa"], ["ancestors", "Haze, Afghani, Jamaican"], ["THC", 22.0], ["CBD", 1.0], ["image", "https://herb.co/wp-content/uploads/2016/10/Amnesia-Haze-hero.jpg"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "buds" ("name", "family", "ancestors", "THC", "CBD", "image") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Galactic Jack"], ["family", "Sativa"], ["ancestors", "Jack Herer, Space Queen"], ["THC", 18.0], ["CBD", 0.6], ["image", "https://herb.co/wp-content/uploads/2016/12/Galactic-Jack.jpg"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for 127.0.0.1 at 2017-11-21 22:56:00 +1100
+Processing by BudsController#index as HTML
+  Rendering buds/index.html.erb within layouts/application
+  [1m[36mBud Load (0.2ms)[0m  [1m[34mSELECT "buds".* FROM "buds"[0m
+  Rendered buds/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 28ms (Views: 25.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/buds/38" for 127.0.0.1 at 2017-11-21 22:56:01 +1100
+Processing by BudsController#show as HTML
+  Parameters: {"id"=>"38"}
+  [1m[36mBud Load (0.1ms)[0m  [1m[34mSELECT  "buds".* FROM "buds" WHERE "buds"."id" = ? LIMIT ?[0m  [["id", 38], ["LIMIT", 1]]
+  Rendering buds/show.html.erb within layouts/application
+  Rendered buds/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 19ms (Views: 16.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-21 23:02:18 +1100
+Processing by BudsController#index as HTML
+  Rendering buds/index.html.erb within layouts/application
+  [1m[36mBud Load (0.2ms)[0m  [1m[34mSELECT "buds".* FROM "buds"[0m
+  Rendered buds/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 57ms (Views: 54.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-21 23:02:40 +1100
+Processing by BudsController#index as HTML
+  Rendering buds/index.html.erb within layouts/application
+  [1m[36mBud Load (0.2ms)[0m  [1m[34mSELECT "buds".* FROM "buds"[0m
+  Rendered buds/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 27ms (Views: 24.9ms | ActiveRecord: 0.2ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mBud Load (0.2ms)[0m  [1m[34mSELECT "buds".* FROM "buds"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[31mDELETE FROM "buds" WHERE "buds"."id" = ?[0m  [["id", 38]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "buds" WHERE "buds"."id" = ?[0m  [["id", 39]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "buds" WHERE "buds"."id" = ?[0m  [["id", 40]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "buds" WHERE "buds"."id" = ?[0m  [["id", 41]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "buds" WHERE "buds"."id" = ?[0m  [["id", 42]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "buds" WHERE "buds"."id" = ?[0m  [["id", 43]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "buds" ("name", "family", "ancestors", "THC", "CBD", "image") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Northern Lights"], ["family", "Indica"], ["ancestors", "Afghani, Thai"], ["THC", 26.0], ["CBD", 1.2], ["image", "https://herb.co/wp-content/uploads/2016/10/Northern-Lights-hero.jpg"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "buds" ("name", "family", "ancestors", "THC", "CBD", "image") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "God's Gift"], ["family", "Indica"], ["ancestors", "OG Kush, Grandaddy Purple"], ["THC", 20.0], ["CBD", 0.1], ["image", "https://herb.co/wp-content/uploads/2016/08/Gods_Gift.jpg"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "buds" ("name", "family", "ancestors", "THC", "CBD", "image") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Doug's Varin"], ["family", "Sativa"], ["ancestors", "Unknown"], ["THC", 19.0], ["CBD", 0.2], ["image", "https://herb.co/wp-content/uploads/2017/04/Dougs-Varin.jpg"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "buds" ("name", "family", "ancestors", "THC", "CBD", "image") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Jedi Kush"], ["family", "Indica"], ["ancestors", "Death Star Kush"], ["THC", 22.0], ["CBD", 1.0], ["image", "https://herb.co/wp-content/uploads/2017/05/Jedi-Kush.jpg "]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "buds" ("name", "family", "ancestors", "THC", "CBD", "image") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Stephen Hawking Kush"], ["family", "Indica"], ["ancestors", "Harle-tsu"], ["THC", 5.0], ["CBD", 5.0], ["image", "https://herb.co/wp-content/uploads/2017/04/Stephen-Hawking-Kush.jpg"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "buds" ("name", "family", "ancestors", "THC", "CBD", "image") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Amnesia Haze"], ["family", "Sativa"], ["ancestors", "Haze, Afghani, Jamaican"], ["THC", 22.0], ["CBD", 1.0], ["image", "https://herb.co/wp-content/uploads/2016/10/Amnesia-Haze-hero.jpg"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "buds" ("name", "family", "ancestors", "THC", "CBD", "image") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Galactic Jack"], ["family", "Sativa"], ["ancestors", "Jack Herer, Space Queen"], ["THC", 18.0], ["CBD", 0.6], ["image", "https://herb.co/wp-content/uploads/2016/12/Galactic-Jack.jpg"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "buds" ("name", "family", "ancestors", "THC", "CBD", "image") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Mango OG"], ["family", "Indica/Sativa(65/35)"], ["ancestors", "Mango Haze, SFV OG"], ["THC", 19.0], ["CBD", 0.9], ["image", "https://www.marijuana.com/wp-content/uploads/2016/07/Mango_OG-700x336.jpg"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m

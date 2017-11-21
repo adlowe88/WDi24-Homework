@@ -31,10 +31,14 @@ class BudsController < ApplicationController
   end
 
   def update
-
+    bud = Bud.find params[:id]
+    bud.update :name => params[:name], :family => params[:family], :ancestors => params[:ancestors], :THC => params[:THC], :CBD => params[:CBD], :image => params[:image]
+    redirect_to bud_path(bud.id)
   end
 
   def destroy
-
+    bud = Bud.find params[:id]
+    bud.destroy
+    redirect_to buds_path
   end
 end

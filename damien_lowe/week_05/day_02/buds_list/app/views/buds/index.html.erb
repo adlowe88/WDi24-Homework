@@ -1,5 +1,5 @@
-<h1>All Buds</h1>
 
+<h2 class='favourites'>Some of our favourites so far...</h2>
 <% @buds.each do | bud |  %>
   <p><%= link_to bud.name, bud_path(bud.id) %> </p>
 <% end %>

@@ -1,0 +1,25 @@
+body {
+  background-color: #53a37b;
+  /*background-image: url(Bud.create :name => "Northern Lights", :family => "Indica", :ancestors => "Afghani, Thai", :THC => 26, :CBD => 1.2, :image => "https://herb.co/wp-content/uploads/2016/10/Northern-Lights-hero.jpg");*/
+  color: white;
+  text-align: center;
+  font-size: 34px;
+}
+
+a {
+  color: #B2FFFF;
+  font-size: 22px;
+}
+
+nav a{
+  color: white;
+  font-size: 34px;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.favourites {
+  font-style: italic;
+  padding-bottom: 30px;
+  padding-top: 50px;
+}
