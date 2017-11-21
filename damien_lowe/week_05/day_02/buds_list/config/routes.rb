@@ -8,5 +8,8 @@ Rails.application.routes.draw do
   get '/buds' => 'buds#index' #All the buds on display
 
   get '/buds/new' => 'buds#new' #Form
-  get '/buds' => 'buds#create' #To add to database
+  post '/buds' => 'buds#create' #To add to database
+
+  get '/buds/:id' => 'buds#show', :as => 'bud' #Display one goodie
+
 end

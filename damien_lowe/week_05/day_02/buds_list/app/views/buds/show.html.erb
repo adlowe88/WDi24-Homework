@@ -1,0 +1,7 @@
+<h1><%= @buds.name %></h1>
+
+<%= image_tag(@buds.image, :class => 'feature') unless @buds.image.blank? %>
+<div>Family: <%= @buds.family %></div>
+<div>Ancestors: <%= @buds.ancestors %></div>
+<div>THC: <%= @buds.THC %></div>
+<div>CBD: <%= @buds.CBD %></div>

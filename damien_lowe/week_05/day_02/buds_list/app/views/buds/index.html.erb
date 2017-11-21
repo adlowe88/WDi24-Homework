@@ -1,1 +1,5 @@
-<h1>This is the index page</h1>
+<h1>All Buds</h1>
+
+<% @buds.each do | bud |  %>
+  <p><%= link_to bud.name, bud_path(bud.id) %> </p>
+<% end %>
