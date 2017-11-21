@@ -1,0 +1,12 @@
+<h2>Edit Your Bud</h2>
+
+<form action="<%= bud_path(@buds.id) %>" method="post">
+  Name: <input type="text" name="name" value="<%= @buds.name %>" autofocus>
+  Image: <input type="url" name="image" value="<%= @buds.image %>">
+  Family: <input type="text" name="family" value="<%= @buds.family %>">
+  Ancestors: <input type="text" name="ancestors" value="<%= @buds.ancestors %>">
+  THC: <input type="number" name="THC" value="<%= @buds.THC %>">
+  CBD: <input type="number" name="CBD" value="<%= @buds.CBD %>">
+
+  <button>Edit planet</button>
+</form>

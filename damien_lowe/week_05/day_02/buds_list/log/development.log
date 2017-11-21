@@ -1140,3 +1140,173 @@ Processing by BudsController#show as HTML
 Completed 200 OK in 17ms (Views: 14.0ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/buds.5" for 127.0.0.1 at 2017-11-21 19:21:43 +1100
+Processing by BudsController#index as 
+  Rendering buds/index.html.erb within layouts/application
+  [1m[36mBud Load (2.0ms)[0m  [1m[34mSELECT "buds".* FROM "buds"[0m
+  Rendered buds/index.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 483ms (Views: 211.0ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/buds/1" for 127.0.0.1 at 2017-11-21 19:21:45 +1100
+Processing by BudsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBud Load (0.2ms)[0m  [1m[34mSELECT  "buds".* FROM "buds" WHERE "buds"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering buds/show.html.erb within layouts/application
+  Rendered buds/show.html.erb within layouts/application (5.0ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+     6: <div>THC: <%= @buds.THC %></div>
+     7: <div>CBD: <%= @buds.CBD %></div>
+     8: 
+     9: <%= link_to "Edit Bud", planet_edit_path(@planet.id) %>
+    10: <%= button_to "Destroy Bud (DON'T DO IT!)", planet_path(@planet.id), :method => 'delete' %>
+  
+app/views/buds/show.html.erb:9:in `_app_views_buds_show_html_erb___2423022349519908551_70133222923260'
+Started GET "/buds/new" for 127.0.0.1 at 2017-11-21 19:22:14 +1100
+Processing by BudsController#new as HTML
+  Rendering buds/new.html.erb within layouts/application
+  Rendered buds/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 14ms (Views: 12.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/buds/show" for 127.0.0.1 at 2017-11-21 19:22:19 +1100
+Processing by BudsController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mBud Load (0.1ms)[0m  [1m[34mSELECT  "buds".* FROM "buds" WHERE "buds"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Bud with 'id'=show):
+  
+app/controllers/buds_controller.rb:26:in `show'
+Started GET "/buds/edit" for 127.0.0.1 at 2017-11-21 19:22:33 +1100
+Processing by BudsController#show as HTML
+  Parameters: {"id"=>"edit"}
+  [1m[36mBud Load (0.1ms)[0m  [1m[34mSELECT  "buds".* FROM "buds" WHERE "buds"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Bud with 'id'=edit):
+  
+app/controllers/buds_controller.rb:26:in `show'
+Started GET "/buds/2/edit" for 127.0.0.1 at 2017-11-21 19:22:42 +1100
+Processing by BudsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBud Load (0.2ms)[0m  [1m[34mSELECT  "buds".* FROM "buds" WHERE "buds"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering buds/edit.html.erb within layouts/application
+  Rendered buds/edit.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 20ms (Views: 16.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/buds" for 127.0.0.1 at 2017-11-21 19:23:06 +1100
+Processing by BudsController#index as HTML
+  Rendering buds/index.html.erb within layouts/application
+  [1m[36mBud Load (0.2ms)[0m  [1m[34mSELECT "buds".* FROM "buds"[0m
+  Rendered buds/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 22ms (Views: 19.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/buds/1" for 127.0.0.1 at 2017-11-21 19:23:08 +1100
+Processing by BudsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBud Load (0.3ms)[0m  [1m[34mSELECT  "buds".* FROM "buds" WHERE "buds"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering buds/show.html.erb within layouts/application
+  Rendered buds/show.html.erb within layouts/application (3.2ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+     6: <div>THC: <%= @buds.THC %></div>
+     7: <div>CBD: <%= @buds.CBD %></div>
+     8: 
+     9: <%= link_to "Edit Bud", planet_edit_path(@planet.id) %>
+    10: <%= button_to "Destroy Bud (DON'T DO IT!)", planet_path(@planet.id), :method => 'delete' %>
+  
+app/views/buds/show.html.erb:9:in `_app_views_buds_show_html_erb___2423022349519908551_70133274660040'
+Started GET "/buds/1" for 127.0.0.1 at 2017-11-21 19:23:38 +1100
+Processing by BudsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBud Load (0.2ms)[0m  [1m[34mSELECT  "buds".* FROM "buds" WHERE "buds"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering buds/show.html.erb within layouts/application
+  Rendered buds/show.html.erb within layouts/application (4.2ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+     6: <div>THC: <%= @buds.THC %></div>
+     7: <div>CBD: <%= @buds.CBD %></div>
+     8: 
+     9: <%= link_to "Edit Bud", bud_edit_path(@planet.id) %>
+    10: <%= button_to "Destroy Bud (DON'T DO IT!)", bud_path(@planet.id), :method => 'delete' %>
+  
+app/views/buds/show.html.erb:9:in `_app_views_buds_show_html_erb___2423022349519908551_70133215757400'
+Started GET "/buds/1" for 127.0.0.1 at 2017-11-21 19:23:49 +1100
+Processing by BudsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBud Load (0.2ms)[0m  [1m[34mSELECT  "buds".* FROM "buds" WHERE "buds"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering buds/show.html.erb within layouts/application
+  Rendered buds/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 42ms (Views: 37.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/buds/1/edit" for 127.0.0.1 at 2017-11-21 19:23:51 +1100
+Processing by BudsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBud Load (0.1ms)[0m  [1m[34mSELECT  "buds".* FROM "buds" WHERE "buds"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering buds/edit.html.erb within layouts/application
+  Rendered buds/edit.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 20ms (Views: 16.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/buds/1/edit" for 127.0.0.1 at 2017-11-21 19:23:56 +1100
+Processing by BudsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBud Load (0.2ms)[0m  [1m[34mSELECT  "buds".* FROM "buds" WHERE "buds"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering buds/edit.html.erb within layouts/application
+  Rendered buds/edit.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 20ms (Views: 16.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/buds/1" for 127.0.0.1 at 2017-11-21 19:24:01 +1100
+Processing by BudsController#update as HTML
+  Parameters: {"name"=>"Jedi Kush", "image"=>"", "family"=>"Sativa", "ancestors"=>"Death Star Kush", "THC"=>"22.0", "CBD"=>"1.0", "id"=>"1"}
+No template found for BudsController#update, rendering head :no_content
+Completed 204 No Content in 62ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/buds/1" for 127.0.0.1 at 2017-11-21 19:24:04 +1100
+Processing by BudsController#update as HTML
+  Parameters: {"name"=>"Jedi Kush", "image"=>"", "family"=>"Sativa", "ancestors"=>"Death Star Kush", "THC"=>"22.0", "CBD"=>"1.0", "id"=>"1"}
+No template found for BudsController#update, rendering head :no_content
+Completed 204 No Content in 67ms (ActiveRecord: 0.0ms)
+
+
+Started DELETE "/buds/1" for 127.0.0.1 at 2017-11-21 19:24:07 +1100
+Processing by BudsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"/fcVQar4xmOnHJ5wfvg4rTB2CyG+2sGcdxGubpgOtNoxLwu7z/mNIFE6z9yHcyWUNnC89AFihD1IzSE8Fj8Y+Q==", "id"=>"1"}
+No template found for BudsController#destroy, rendering head :no_content
+Completed 204 No Content in 62ms (ActiveRecord: 0.0ms)
+
+
+Started DELETE "/buds/1" for 127.0.0.1 at 2017-11-21 19:24:08 +1100
+Processing by BudsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"/fcVQar4xmOnHJ5wfvg4rTB2CyG+2sGcdxGubpgOtNoxLwu7z/mNIFE6z9yHcyWUNnC89AFihD1IzSE8Fj8Y+Q==", "id"=>"1"}
+No template found for BudsController#destroy, rendering head :no_content
+Completed 204 No Content in 62ms (ActiveRecord: 0.0ms)
+
+
+Started DELETE "/buds/1" for 127.0.0.1 at 2017-11-21 19:24:09 +1100
+Processing by BudsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"/fcVQar4xmOnHJ5wfvg4rTB2CyG+2sGcdxGubpgOtNoxLwu7z/mNIFE6z9yHcyWUNnC89AFihD1IzSE8Fj8Y+Q==", "id"=>"1"}
+No template found for BudsController#destroy, rendering head :no_content
+Completed 204 No Content in 62ms (ActiveRecord: 0.0ms)
+
+

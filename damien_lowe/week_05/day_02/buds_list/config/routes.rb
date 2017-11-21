@@ -12,4 +12,8 @@ Rails.application.routes.draw do
 
   get '/buds/:id' => 'buds#show', :as => 'bud' #Display one goodie
 
+  get '/buds/:id/edit' => 'buds#edit', :as => 'bud_edit'
+  post 'buds/:id' => 'buds#update'
+  delete '/buds/:id' => 'buds#destroy'
+
 end

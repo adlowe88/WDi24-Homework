@@ -26,4 +26,15 @@ class BudsController < ApplicationController
     @buds = Bud.find params[:id]
   end
 
+  def edit
+    @buds = Bud.find params[:id]
+  end
+
+  def update
+
+  end
+
+  def destroy
+
+  end
 end
