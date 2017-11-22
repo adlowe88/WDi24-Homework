@@ -1,0 +1,7 @@
+<h1 class="favourites">Artists Index</h1>
+<!-- <p>Find me in app/views/artists/index.html.erb</p> -->
+
+<% @artists.each do | artist | %>
+  <h3><%= link_to artist.name, artist %></h3>
+  <%= image_tag(artist.image, :class => 'thumb') %>
+<% end %>

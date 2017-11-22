@@ -1,0 +1,40 @@
+<%= form_for @artist do | f | %>
+  <fieldset>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </fieldset>
+  <fieldset>
+    <%= f.label :instrument, 'Instrument(s)' %>
+    <%= f.text_field :instrument %>
+  </fieldset>
+
+  <fieldset>
+    <%= f.label :genre %>
+    <%= f.text_field :genre %>
+  </fieldset>
+
+  <fieldset>
+    <%= f.label :nationality %>
+    <%= f.text_field :nationality %>
+  </fieldset>
+
+  <fieldset>
+    <%= f.label :birth, 'Date of Birth' %>
+    <%= f.text_field :birth, :required => true, :placeholder => 'yyyy-mm-dd'%>
+  </fieldset>
+
+  <fieldset>
+    <%= f.label :death, 'Date of Death' %>
+    <%= f.text_field :death, :placeholder => 'yyyy-mm-dd'%>
+  </fieldset>
+
+  <fieldset>
+    <%= f.label :image %>
+    <%= f.url_field :image %>
+  </fieldset>
+
+  <fieldset>
+    <label></label>
+    <%= f.submit %>
+  </fieldset>
+<% end %>

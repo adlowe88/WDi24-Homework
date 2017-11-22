@@ -1,0 +1,9 @@
+
+<!-- <p>Find me in app/views/buds/index.html.erb</p> -->
+
+<h2 class="favourites">Some of our favourites so far...</h2>
+
+<% @buds.each do | bud | %>
+  <h3><%= link_to bud.name, bud %></h3>
+  <%= image_tag(bud.image, :class => 'thumb') %>
+<% end %>

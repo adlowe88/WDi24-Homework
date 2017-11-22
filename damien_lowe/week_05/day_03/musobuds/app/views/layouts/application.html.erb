@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Musobuds</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <nav>
+     <%= link_to 'All Buds', root_path %>
+     <%= link_to 'New Bud', new_bud_path %>
+     <%= link_to 'All Artists', artists_path %>
+     <%= link_to 'New Artists', new_artist_path %>
+  </nav>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>

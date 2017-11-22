@@ -1,0 +1,18 @@
+<h1><%= @artist.name %></h1>
+<!-- <p>Find me in app/views/artists/show.html.erb</p> -->
+<%= image_tag(@artist.image, :class => 'feature') unless @artist.image.blank? %>
+
+<ul>
+  <li>Instrument(s): <%= @artist.instrument %></li>
+  <li>Genre: <%= @artist.genre %></li>
+  <li>Nationality: <%= @artist.nationality %></li>
+  <li>Birth: <%= @artist.birth %></li>
+  <li>Death: <%= @artist.death %></li>
+</ul>
+
+<% @artist.buds.each do | bud | %>
+  <%= link_to image_tag(bud.image, :class => 'thumb'), bud %>
+<% end %>
+
+<%= button_to 'Edit Artist', edit_artist_path(@artist.id), :method => 'get' %>
+<%= button_to 'Remove Artist', artist_path(@artist.id), :method => 'delete' %>

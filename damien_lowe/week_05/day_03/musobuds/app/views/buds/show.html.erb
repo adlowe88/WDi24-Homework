@@ -1,0 +1,16 @@
+<h1><%= @bud.name %></h1>
+
+<%= image_tag(@bud.image, :class => 'feature') unless @bud.image.blank? %>
+<ul>
+  <li>Family: <%= @bud.strain %></li>
+  <li>Ancestors: <%= @bud.ancestors %></li>
+  <li>THC: <%= @bud.THC %>%</li>
+  <li>CBD: <%= @bud.CBD %>%</li>
+  <% unless @bud.artist.nil? %>
+    <li><%= link_to @bud.artist.name, @bud.artist%></li>
+  <% end %>
+</ul>
+
+
+<%= button_to 'Edit Bud', edit_bud_path(@bud.id), :method => 'get' %>
+<%= button_to 'Remove Bud (NOOOOOO!!!)', bud_path(@bud.id), :method => 'delete' %>

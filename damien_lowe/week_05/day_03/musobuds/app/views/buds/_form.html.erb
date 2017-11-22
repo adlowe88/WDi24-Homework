@@ -1,0 +1,40 @@
+<%= form_for @bud do | f | %>
+  <fieldset>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </fieldset>
+  <fieldset>
+    <%= f.label :strain %>
+    <%= f.text_field :strain %>
+  </fieldset>
+
+  <fieldset>
+    <%= f.label :ancestors %>
+    <%= f.text_field :ancestors %>
+  </fieldset>
+
+  <fieldset>
+    <%= f.label :THC %>
+    <%= f.text_field :THC %>
+  </fieldset>
+
+  <fieldset>
+    <%= f.label :CBD %>
+    <%= f.text_field :CBD %>
+  </fieldset>
+
+  <fieldset>
+    <%= f.label :image %>
+    <%= f.url_field :image %>
+  </fieldset>
+
+  <fieldset>
+    <%= f.label :artist_id %>
+    <%= f.select :artist_id, Artist.pluck(:name, :id), :include_blank => true %>
+  </fieldset>
+
+  <fieldset>
+    <label></label>
+    <%= f.submit %>
+  </fieldset>
+<% end %>
