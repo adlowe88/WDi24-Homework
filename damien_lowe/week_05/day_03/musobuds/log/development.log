@@ -3731,3 +3731,122 @@ Processing by ArtistsController#index as HTML
 Completed 200 OK in 24ms (Views: 21.8ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-11-23 10:43:14 +1100
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BudsController#index as HTML
+  Rendering buds/index.html.erb within layouts/application
+  [1m[36mBud Load (0.2ms)[0m  [1m[34mSELECT "buds".* FROM "buds"[0m
+  Rendered buds/index.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 221ms (Views: 207.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/artists" for 127.0.0.1 at 2017-11-23 10:43:18 +1100
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 44ms (Views: 29.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/artists/15" for 127.0.0.1 at 2017-11-23 10:43:23 +1100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  [1m[36mBud Load (0.2ms)[0m  [1m[34mSELECT "buds".* FROM "buds" WHERE "buds"."artist_id" = ?[0m  [["artist_id", 15]]
+  Rendered artists/show.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 46ms (Views: 40.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/artists" for 127.0.0.1 at 2017-11-23 10:43:27 +1100
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 25ms (Views: 21.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/artists/16" for 127.0.0.1 at 2017-11-23 10:43:28 +1100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  [1m[36mBud Load (0.2ms)[0m  [1m[34mSELECT "buds".* FROM "buds" WHERE "buds"."artist_id" = ?[0m  [["artist_id", 16]]
+  Rendered artists/show.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 34ms (Views: 30.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-23 10:43:34 +1100
+Processing by BudsController#index as HTML
+  Rendering buds/index.html.erb within layouts/application
+  [1m[36mBud Load (0.3ms)[0m  [1m[34mSELECT "buds".* FROM "buds"[0m
+  Rendered buds/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 29ms (Views: 25.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/buds/95" for 127.0.0.1 at 2017-11-23 10:43:36 +1100
+Processing by BudsController#show as HTML
+  Parameters: {"id"=>"95"}
+  [1m[36mBud Load (0.2ms)[0m  [1m[34mSELECT  "buds".* FROM "buds" WHERE "buds"."id" = ? LIMIT ?[0m  [["id", 95], ["LIMIT", 1]]
+  Rendering buds/show.html.erb within layouts/application
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  Rendered buds/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 25ms (Views: 20.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/buds/95/edit" for 127.0.0.1 at 2017-11-23 10:43:38 +1100
+Processing by BudsController#edit as HTML
+  Parameters: {"id"=>"95"}
+  [1m[36mBud Load (0.2ms)[0m  [1m[34mSELECT  "buds".* FROM "buds" WHERE "buds"."id" = ? LIMIT ?[0m  [["id", 95], ["LIMIT", 1]]
+  Rendering buds/edit.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "artists"."name", "artists"."id" FROM "artists"[0m
+  Rendered buds/_form.html.erb (17.8ms)
+  Rendered buds/edit.html.erb within layouts/application (20.1ms)
+Completed 200 OK in 44ms (Views: 35.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/artists" for 127.0.0.1 at 2017-11-23 10:44:26 +1100
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 28ms (Views: 24.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/artists/15" for 127.0.0.1 at 2017-11-23 10:44:28 +1100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  [1m[36mBud Load (0.4ms)[0m  [1m[34mSELECT "buds".* FROM "buds" WHERE "buds"."artist_id" = ?[0m  [["artist_id", 15]]
+  Rendered artists/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 25ms (Views: 21.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-23 13:02:30 +1100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BudsController#index as HTML
+  Rendering buds/index.html.erb within layouts/application
+  [1m[36mBud Load (0.2ms)[0m  [1m[34mSELECT "buds".* FROM "buds"[0m
+  Rendered buds/index.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 186ms (Views: 174.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/artists" for 127.0.0.1 at 2017-11-23 13:02:40 +1100
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 36ms (Views: 28.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/artists/16" for 127.0.0.1 at 2017-11-23 13:02:41 +1100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  [1m[36mBud Load (0.5ms)[0m  [1m[34mSELECT "buds".* FROM "buds" WHERE "buds"."artist_id" = ?[0m  [["artist_id", 16]]
+  Rendered artists/show.html.erb within layouts/application (30.3ms)
+Completed 200 OK in 55ms (Views: 48.8ms | ActiveRecord: 0.8ms)
+
+
